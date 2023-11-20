@@ -1,35 +1,30 @@
 {
   "schemaVersion": 1,
   "id": "sp-claims",
-  "version": "0.0.1",
+  "version": "0.1.0",
 
   "name": "Single Player Claims",
   "description": "Adds claiming system to single player.",
-  "authors": [
-    "DakotaCraft"
-  ],
+  "authors": ["DakotaCraft"],
   "contact": {
-    "homepage": "https://fabricmc.net/",
-    "sources": "https://github.com/FabricMC/fabric-example-mod"
+    "homepage": "https://github.com/JDTalley",
+    "sources": "https://github.com/JDTalley/fabric-sp-claims"
   },
 
-  "license": "CC0-1.0",
+  "license": "GPL-3.0-or-later",
   "icon": "assets/modid/icon.png",
 
   "environment": "*",
   "entrypoints": {
-    "main": [
-      "net.dakotacraft.spclaims.SPClaims"
-    ]
+    "client": ["net.dakotacraft.spclaims.SPClaimsClient"],
+    "main": ["net.dakotacraft.spclaims.SPClaims"]
   },
-  "mixins": [
-    "modid.mixins.json"
-  ],
+  "mixins": ["modid.mixins.json"],
 
   "depends": {
-    "fabricloader": ">=0.14.11",
+    "fabricloader": ">=0.14.24",
     "fabric-api": "*",
-    "minecraft": "~1.19.3",
+    "minecraft": ">=1.20.1",
     "java": ">=17"
   },
   "suggests": {
